@@ -26,7 +26,9 @@ class MeuServico : Service() {
 
         Toast.makeText(this,"iniciando alarme", Toast.LENGTH_LONG).show()
 
-        return Service.START_REDELIVER_INTENT
+        return Service.START_REDELIVER_INTENT // se processo for intenrrompido ele recupera os valores da intent, não perde os put extra
+        //return Service.START_STICKY // NÃO RECUPERA o put extra caso o processo seja intenrrompido
+
 
     }
 
